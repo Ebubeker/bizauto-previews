@@ -14,8 +14,8 @@
   --line: #ddd2bf;
   --line-dark: #3a322c;
 
-  --display: "Fraunces", Georgia, "Times New Roman", serif;
-  --body: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --display: "Sentient", Georgia, "Times New Roman", serif;
+  --body: "Switzer", system-ui, -apple-system, sans-serif;
 
   --step--1: clamp(0.83rem, 0.79rem + 0.2vw, 0.95rem);
   --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.13rem);
@@ -70,7 +70,7 @@ h1,
 h2,
 h3 {
   font-family: var(--display);
-  font-weight: 480;
+  font-weight: 500;
   line-height: 1.04;
   letter-spacing: -0.012em;
   font-optical-sizing: auto;
@@ -195,10 +195,24 @@ h3 {
   box-shadow: 0 1px 0 var(--line-dark);
   padding-block: 0.55rem;
 }
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(15, 12, 10, 0.6) 0%, rgba(15, 12, 10, 0.28) 60%, transparent 100%);
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease);
+}
+.site-header.is-scrolled::before {
+  opacity: 0;
+}
 .site-header__inner {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 .brand {
   font-family: var(--display);
@@ -277,7 +291,7 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(15, 12, 10, 0.5) 0%, rgba(15, 12, 10, 0.2) 32%, rgba(15, 12, 10, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(15, 12, 10, 0.66) 0%, rgba(15, 12, 10, 0.34) 38%, rgba(15, 12, 10, 0.84) 100%);
 }
 .hero__inner {
   position: relative;
@@ -289,11 +303,11 @@ h3 {
   margin-top: 0.5rem;
   margin-bottom: 1.25rem;
   color: var(--ivory);
-  font-weight: 460;
+  font-weight: 500;
   letter-spacing: -0.02em;
 }
 .hero__title em {
-  font-style: italic;
+  font-style: normal;
   color: var(--gold-soft);
 }
 .hero__lead {
@@ -351,7 +365,7 @@ h3 {
 }
 .pullquote {
   font-family: var(--display);
-  font-style: italic;
+  font-style: normal;
   font-size: var(--step-2);
   color: var(--gold);
   line-height: 1.25;
@@ -465,7 +479,7 @@ h3 {
 .dish--more .dish__wine {
   color: var(--gold-soft);
   margin-top: 1rem;
-  font-style: italic;
+  font-style: normal;
   font-family: var(--display);
 }
 
@@ -509,7 +523,7 @@ h3 {
 }
 .ambience__inner em {
   color: var(--gold-soft);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ============ Reviews ============ */
@@ -638,7 +652,7 @@ h3 {
 .site-footer__tag {
   color: var(--gold-soft);
   font-family: var(--display);
-  font-style: italic;
+  font-style: normal;
   margin-top: 0.5rem;
 }
 .site-footer__tag span {
