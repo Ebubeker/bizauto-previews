@@ -386,7 +386,7 @@ h3 {
 
 /* ===== rooms (teal) ===== */
 .rooms__head {
-  max-width: 24ch;
+  max-width: 44rem;
   margin-bottom: 3rem;
 }
 .rooms__head h2 {
