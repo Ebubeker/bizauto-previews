@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="The Golden Rooster Hostel">
+  <rect width="32" height="32" rx="8" fill="#2e6b5e"/>
+  <circle cx="16" cy="18.5" r="6" fill="#e8a23d"/>
+  <path d="M10.8 12.6 l2.3 2 l2.4-3.4 l2.4 3.4 l2.3-2 v2.3 h-11.4 z" fill="#e8a23d"/>
+</svg>
