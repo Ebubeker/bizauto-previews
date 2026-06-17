@@ -293,7 +293,7 @@ h3 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(24, 18, 14, 0.55) 0%, rgba(24, 18, 14, 0.18) 38%, rgba(24, 18, 14, 0.82) 100%);
+  background: linear-gradient(180deg, rgba(24, 18, 14, 0.6) 0%, rgba(24, 18, 14, 0.42) 46%, rgba(24, 18, 14, 0.86) 100%);
 }
 .hero__inner {
   position: relative;
