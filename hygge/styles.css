@@ -920,3 +920,6 @@ h3 {
     scroll-behavior: auto;
   }
 }
+
+/* hamburger: always pinned to the far right of the navbar (only shows on mobile) */
+.site-header__inner .nav-toggle { margin-left: auto; }

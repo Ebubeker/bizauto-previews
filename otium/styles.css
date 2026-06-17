@@ -893,3 +893,6 @@ h3 {
     box-shadow: 0 16px 34px -14px rgba(0, 0, 0, 0.6);
   }
 }
+
+/* hamburger: always pinned to the far right of the navbar (only shows on mobile) */
+.site-header__inner .nav-toggle { margin-left: auto; }
