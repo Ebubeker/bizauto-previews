@@ -907,3 +907,6 @@ h3 {
 
 /* hamburger: always pinned to the far right of the navbar (only shows on mobile) */
 .site-header__inner .nav-toggle { margin-left: auto; }
+
+/* fix: the Rezervo CTA in the open mobile menu sits on plum, so its text must be light */
+body.nav-open .nav a.nav__cta { color: #fbf3f2; }
