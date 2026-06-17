@@ -20,6 +20,14 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll('[data-anim]').forEach((el) => io.observe(el));
 
+// The hero is above the fold, and its line-mask title spans are clipped by overflow:hidden,
+// so IntersectionObserver never reports them as intersecting. Reveal hero anims directly on load.
+requestAnimationFrame(() =>
+  requestAnimationFrame(() => {
+    document.querySelectorAll('.hero [data-anim]').forEach((el) => el.classList.add('in'));
+  })
+);
+
 // Count-up numbers
 const countIO = new IntersectionObserver(
   (entries) => {
