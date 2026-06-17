@@ -800,10 +800,42 @@ h3 {
     opacity: 0.82;
     font-weight: 400;
   }
+  /* keep sticky CTA from covering the last footer lines */
+  .site-footer {
+    padding-bottom: 6.5rem;
+  }
 }
 @media (max-width: 540px) {
   .treatments__grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 420px) {
+  /* comfortable, consistent side padding at the narrowest widths */
+  :root {
+    --gutter: 20px;
+  }
+  /* trim oversized display so nothing is clipped on a 360px screen */
+  .hero__title {
+    font-size: clamp(2.35rem, 1.4rem + 4.4vw, 2.9rem);
+  }
+  .treatments__head h2,
+  .book__inner h2 {
+    font-size: var(--step-3);
+  }
+  .hero__actions .btn,
+  .book__actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  /* keep the sticky CTA on a single tidy line */
+  .book-bar {
+    left: 16px;
+    right: 16px;
+    padding: 0.95em 1.1em;
+    font-size: var(--step--1);
+    flex-wrap: wrap;
+    text-align: center;
   }
 }
 @media (prefers-reduced-motion: reduce) {
