@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=gambetta@400,500,600&f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <script type="application/ld+json">
 {
@@ -34,10 +34,10 @@
   <div class="wrap site-header__inner">
     <a class="brand" href="#"><img src="assets/img/logo.png" alt="" />Morfeas</a>
     <nav class="nav" data-nav aria-label="Main">
-      <a href="#place">The place</a>
-      <a href="#apartment">The apartment</a>
+      <a href="#host">The home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#nearby">Nearby</a>
       <a href="#reviews">Reviews</a>
-      <a href="#location">Find us</a>
       <a class="nav__cta" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Book your stay</a>
     </nav>
     <div class="site-header__cta">
@@ -50,148 +50,158 @@
 </header>
 
 <main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__media" data-parallax="0.14">
-      <img src="assets/img/bk-01.jpg" alt="The bright Morfeas guest house room with a double bed, dining nook and large window." />
-    </div>
-    <div class="hero__veil"></div>
-    <div class="wrap hero__inner">
-      <h1 class="hero__title" data-stagger>
-        <span class="line"><span data-anim>Your calm home</span></span>
-        <span class="line"><span data-anim>in the centre of</span></span>
-        <span class="line"><span data-anim><em>Tirana.</em></span></span>
-      </h1>
-      <p class="hero__lead" data-anim="rise">A bright, spotless, self-catering guest house a five-minute walk from Skanderbeg Square, hosted with real care by Blerina. Your own private apartment in the heart of the city.</p>
-      <div class="hero__actions" data-anim="rise">
-        <a class="btn btn--primary btn--arrow" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Book your stay</a>
-        <a class="btn btn--ghost" href="#apartment">See the apartment</a>
+  <!-- HERO (split) -->
+  <section class="section hero">
+    <div class="wrap hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title" data-anim data-stagger>
+          <span class="line"><span>Your calm home</span></span>
+          <span class="line"><span>in the heart</span></span>
+          <span class="line"><span>of <em>Tirana.</em></span></span>
+        </h1>
+        <p class="hero__lead" data-anim="rise">A bright, spotless apartment of your own, a five-minute walk from Skanderbeg Square, hosted with real care by Blerina.</p>
+        <div class="hero__actions" data-anim="rise">
+          <a class="btn btn--primary btn--arrow" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Book your stay</a>
+          <a class="btn btn--ghost" href="#gallery">See the apartment</a>
+        </div>
+        <p class="hero__rating" data-anim="rise"><b>9.2</b> "Superb" on Booking.com, from 19 guest reviews</p>
       </div>
-    </div>
-  </section>
-
-  <!-- THE PLACE -->
-  <section class="section section--cream section--rounded vibe" id="place">
-    <div class="wrap vibe__grid">
-      <div class="vibe__text">
-        <h2 data-anim="rise">Hosted with heart,<br />steps from the square</h2>
-        <p data-anim="rise">Guests remember two things about Morfeas: how central it is, and Blerina, the host, who is quick to reply and full of good local tips. It is your own self-contained apartment, not a hotel room.</p>
-        <p data-anim="rise">Bright, brand-new and spotless, with a private bathroom, a little kitchen of your own, and a leafy terrace to come back to. Self check-in, right where you want to be.</p>
-        <ul class="chips" data-stagger>
-          <li data-anim="rise">Garden terrace</li>
-          <li data-anim="rise">Self check-in</li>
-          <li data-anim="rise">Full kitchenette</li>
-          <li data-anim="rise">9.2 Superb</li>
-        </ul>
-      </div>
-      <figure class="media vibe__figure" data-anim="clip">
-        <img src="assets/img/bk-13.jpg" loading="lazy" alt="A bright, freshly furnished bedroom at Morfeas with crisp linen." />
+      <figure class="hero__figure" data-anim="scale">
+        <img src="assets/img/bk-01.jpg" alt="The bright Morfeas apartment with a double bed, dining nook and large window." />
       </figure>
     </div>
   </section>
 
-  <!-- THE APARTMENT -->
-  <section class="section section--teal section--rounded rooms" id="apartment">
-    <div class="wrap">
-      <div class="rooms__head">
-        <h2 data-anim="rise">Your private apartment</h2>
-        <p data-anim="rise">One self-contained unit, about 30 m², for two. Pay by card or cash on arrival.</p>
-      </div>
-      <div class="rooms__grid" data-stagger>
-        <article class="room" data-anim="rise">
-          <figure><img src="assets/img/bk-08.jpg" loading="lazy" alt="The double bedroom with crisp white linen and a soft green wall." /></figure>
-          <div class="room__body">
-            <h3>Bright double room</h3>
-            <p>A spacious double with a private ensuite bathroom, air conditioning and heating, fresh linen and towels, and a garden view.</p>
-            <a class="btn btn--primary btn--arrow" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Check dates</a>
-          </div>
-        </article>
-        <article class="room" data-anim="rise">
-          <figure><img src="assets/img/bk-10.jpg" loading="lazy" alt="The in-room kitchenette and dining corner with a coffee machine." /></figure>
-          <div class="room__body">
-            <h3>Kitchen &amp; terrace</h3>
-            <p>Your own kitchenette with kettle, coffee and cookware, a dining corner, and a leafy shared terrace to unwind on.</p>
-            <a class="btn btn--primary btn--arrow" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Check dates</a>
-          </div>
-        </article>
+  <!-- HIGHLIGHTS strip -->
+  <section class="section highlights">
+    <div class="wrap highlights__grid" data-stagger>
+      <div data-anim="rise"><b>5 min</b><span>walk to Skanderbeg Square</span></div>
+      <div data-anim="rise"><b>~30 m²</b><span>your own private apartment</span></div>
+      <div data-anim="rise"><b>9.2 / 10</b><span>Superb on Booking.com</span></div>
+      <div data-anim="rise"><b>Self check-in</b><span>and your own kitchen</span></div>
+    </div>
+  </section>
+
+  <!-- HOST feature -->
+  <section class="section host" id="host">
+    <div class="wrap host__grid">
+      <figure class="host__figure" data-anim="left">
+        <img src="assets/img/bk-13.jpg" loading="lazy" alt="A bright, freshly made bedroom at Morfeas." />
+      </figure>
+      <div class="host__text">
+        <p class="host__quote" data-anim="rise">The thing guests remember most? <span>Blerina.</span></p>
+        <p data-anim="rise">Across every single review, the host is the standout: quick to reply, genuinely warm, and full of good local tips. She hands you a clean, private apartment in the centre and makes the whole stay feel easy.</p>
+        <p data-anim="rise">It is your own self-contained place, not a hotel room. Bright, brand-new, with a private bathroom, a little kitchen and a leafy terrace to come home to.</p>
       </div>
     </div>
   </section>
 
-  <!-- AMENITIES -->
-  <section class="section section--cream amenities">
+  <!-- GALLERY (editorial) -->
+  <section class="section gallery" id="gallery">
     <div class="wrap">
-      <div class="amenities__head">
-        <h2 data-anim="rise">Everything you need</h2>
-        <p data-anim="rise">A proper little home base, not just a bed.</p>
+      <div class="gallery__head">
+        <h2 data-anim="rise">A look around the apartment</h2>
+        <p data-anim="rise">Bright, spotless and self-catering, with a garden terrace.</p>
       </div>
-      <ul class="chips--cloud" data-stagger>
-        <li data-anim="scale">Free WiFi</li>
-        <li data-anim="scale">Air conditioning &amp; heating</li>
-        <li data-anim="scale">Private ensuite bathroom</li>
-        <li data-anim="scale">Full kitchenette</li>
-        <li data-anim="scale">Self check-in</li>
-        <li data-anim="scale">Flat-screen TV</li>
-        <li data-anim="scale">Garden terrace</li>
-        <li data-anim="scale">Lift</li>
-        <li data-anim="scale">Fresh towels &amp; linen</li>
-        <li data-anim="scale">Non-smoking</li>
+      <div class="gallery__grid" data-stagger>
+        <figure class="g-tall" data-anim="scale">
+          <img src="assets/img/bk-08.jpg" loading="lazy" alt="The double bedroom with crisp linen." />
+          <figcaption>The bedroom</figcaption>
+        </figure>
+        <figure class="g-wide" data-anim="scale">
+          <img src="assets/img/bk-10.jpg" loading="lazy" alt="The in-room kitchenette and dining corner." />
+          <figcaption>Kitchenette &amp; dining</figcaption>
+        </figure>
+        <figure data-anim="scale">
+          <img src="assets/img/bk-05.jpg" loading="lazy" alt="The leafy garden terrace." />
+          <figcaption>Garden terrace</figcaption>
+        </figure>
+        <figure data-anim="scale">
+          <img src="assets/img/bk-13.jpg" loading="lazy" alt="Bright, freshly furnished room." />
+          <figcaption>Bright &amp; fresh</figcaption>
+        </figure>
+        <figure class="g-wide" data-anim="scale">
+          <img src="assets/img/bk-01.jpg" loading="lazy" alt="The room with its dining nook and large window." />
+          <figcaption>Your own space</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY distances -->
+  <section class="section nearby" id="nearby">
+    <div class="wrap nearby__grid">
+      <div class="nearby__intro">
+        <h2 data-anim="rise">Everything within a few minutes</h2>
+        <p data-anim="rise">You could not be more central. Step out the door and you are right in the middle of it.</p>
+      </div>
+      <ul class="nearby__list" data-stagger>
+        <li data-anim="rise"><span class="place">Skanderbeg Square</span><span class="dist">5 min walk</span></li>
+        <li data-anim="rise"><span class="place">Et'hem Bey Mosque</span><span class="dist">6 min walk</span></li>
+        <li data-anim="rise"><span class="place">National History Museum</span><span class="dist">6 min walk</span></li>
+        <li data-anim="rise"><span class="place">National Gallery of Art</span><span class="dist">9 min walk</span></li>
+        <li data-anim="rise"><span class="place">Bus to the airport</span><span class="dist">2 min walk</span></li>
+        <li data-anim="rise"><span class="place">Dajti Ekspres cable car</span><span class="dist">15 min by taxi</span></li>
       </ul>
-      <p class="amenities__note" data-anim="rise">Self-catering, so no breakfast, but the kitchen is yours. Check-in from 2pm, check-out by 11am (both flexible).</p>
     </div>
   </section>
 
-  <!-- REVIEWS -->
-  <section class="section section--ink section--rounded reviews" id="reviews">
+  <!-- GOOD TO KNOW -->
+  <section class="section know">
     <div class="wrap">
-      <div class="reviews__top">
-        <h2 data-anim="rise">Guests rate it Superb</h2>
-        <div class="rating-badge" data-anim="scale">
-          <div><span class="rating-num" data-count="9.2">0</span><span class="rating-slash">/10</span></div>
-          <small>"Superb" on Booking.com, from 19 reviews</small>
+      <div class="gallery__head">
+        <h2 data-anim="rise">Good to know</h2>
+        <p data-anim="rise">The practical bits, up front.</p>
+      </div>
+      <div class="know__grid" data-stagger>
+        <div class="know__card" data-anim="rise">
+          <h3>Check-in &amp; out</h3>
+          <p>Check-in from 2pm, check-out by 11am. Both flexible, just message Blerina ahead.</p>
+        </div>
+        <div class="know__card" data-anim="rise">
+          <h3>Payment</h3>
+          <p>Reserve on Booking.com; pay by card or cash on arrival.</p>
+        </div>
+        <div class="know__card" data-anim="rise">
+          <h3>Languages</h3>
+          <p>English, Italian and Greek spoken.</p>
+        </div>
+        <div class="know__card" data-anim="rise">
+          <h3>Self-catering</h3>
+          <p>No breakfast, but a full kitchenette is yours to use any time.</p>
         </div>
       </div>
-      <div class="reviews__grid" data-stagger>
-        <blockquote data-anim="rise">
-          <p>"The apartment is all you can need. Spacious, bright, clean and the best location to reach Tirana's attractions. The host is always attentive. 110% recommended."</p>
-          <cite>Johan, Colombia (Booking.com)</cite>
-        </blockquote>
+    </div>
+  </section>
+
+  <!-- REVIEWS (featured + small) -->
+  <section class="section section--ink reviews" id="reviews">
+    <div class="wrap">
+      <p class="reviews__lead" data-anim="rise">Rated <span class="rate">9.2 / 10</span> "Superb" by guests on Booking.com.</p>
+      <blockquote class="reviews__feature" data-anim="scale">
+        <p>"The apartment is all you can need. Spacious, bright, clean, and the best location to reach Tirana's most important attractions. The host is always attentive and responsive. 110% recommended."</p>
+        <cite>Johan, Colombia</cite>
+      </blockquote>
+      <div class="reviews__row" data-stagger>
         <blockquote data-anim="rise">
           <p>"Everything was perfect. Everything you need in one small apartment, with ensuite bathroom and kitchen."</p>
-          <cite>Toljan, United Kingdom (Booking.com)</cite>
+          <cite>Toljan, United Kingdom</cite>
         </blockquote>
         <blockquote data-anim="rise">
           <p>"Great friendly hosts, very helpful if there is anything you need."</p>
-          <cite>Delyan, Bulgaria (Booking.com)</cite>
+          <cite>Delyan, Bulgaria</cite>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- LOCATION -->
-  <section class="section section--cream location" id="location">
-    <div class="wrap location__grid">
-      <div class="location__text">
-        <h2 data-anim="rise">Five minutes from Skanderbeg Square</h2>
-        <p data-anim="rise">You could not be more central: a short walk to Skanderbeg Square, the Et'hem Bey Mosque and the National Gallery, with the bus to the airport just down the street.</p>
-        <p class="location__address" data-anim="rise">Rruga Qemal Stafa, Pallati Nila, Tirana</p>
-        <p class="location__badge" data-anim="rise">Languages: English, Italian and Greek spoken.</p>
-        <div data-anim="rise">
-          <a class="btn btn--ghost btn--arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Morfeas%20Guest%20House%20Rruga%20Qemal%20Stafa%20Tirana" target="_blank" rel="noopener" style="border-color: var(--ink);">Open in Google Maps</a>
-        </div>
-      </div>
-      <figure class="media location__figure" data-anim="clip">
-        <img src="assets/img/bk-05.jpg" loading="lazy" alt="The leafy garden terrace at Morfeas with seating and plants." />
-      </figure>
-    </div>
-  </section>
-
-  <!-- BOOK -->
-  <section class="section section--coral section--rounded book" id="book">
-    <div class="wrap book__inner" data-anim="scale">
-      <img class="book__logo" src="assets/img/logo.png" alt="" />
+  <!-- BOOK (image overlay) -->
+  <section class="section book" id="book">
+    <div class="book__media"><img src="assets/img/bk-05.jpg" alt="" /></div>
+    <div class="book__veil"></div>
+    <div class="wrap book__inner" data-anim="rise">
       <h2>Ready for a calm stay in the centre?</h2>
-      <p>Check dates and book in a couple of clicks on Booking.com. Blerina will take it from there.</p>
+      <p>Check dates and book in a couple of clicks. Blerina will take it from there.</p>
       <div class="book__actions">
         <a class="btn btn--primary btn--arrow" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Book on Booking.com</a>
         <a class="btn btn--ghost" href="https://www.instagram.com/morfeasguesthouse" target="_blank" rel="noopener">See Instagram</a>
@@ -224,8 +234,6 @@
     <p class="site-footer__demo">Demo preview built for Morfeas Guest House.</p>
   </div>
 </footer>
-
-<a class="book-bar" href="https://www.booking.com/hotel/al/morfeas-guest-house.html" target="_blank" rel="noopener">Book your stay <span>on Booking.com</span></a>
 
 <script src="script.js"></script>
 </body>
