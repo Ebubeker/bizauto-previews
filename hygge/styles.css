@@ -698,50 +698,113 @@ h3 {
   color: rgba(251, 246, 236, 0.52);
 }
 
-/* ===== mobile nav (full-screen) ===== */
+/* ===== mobile nav (cozy bottom sheet, distinct to Hygge) ===== */
+/* Backdrop only renders on mobile; hidden + inert by default so it never
+   intercepts taps or adds overflow on desktop. */
+.nav-backdrop {
+  display: none;
+}
+.nav__handle {
+  display: none;
+}
+
 @media (max-width: 880px) {
-  .nav {
+  /* warm backdrop behind the sheet */
+  .nav-backdrop {
+    display: block;
     position: fixed;
     inset: 0;
+    z-index: 47;
+    background: rgba(44, 38, 32, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s var(--ease), visibility 0.4s var(--ease);
+  }
+  body.nav-open .nav-backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* the sheet itself: slides up from the bottom */
+  .nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: 100vh;
-    height: 100dvh;
+    max-height: 70vh;
+    max-height: 70dvh;
     margin: 0;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.4rem;
-    background: var(--wood);
-    color: var(--surface);
-    padding: 5.5rem 2.5rem 2.5rem;
-    transform: translateX(100%);
-    transition: transform 0.45s var(--ease);
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    background: #fbf6ec;
+    color: var(--ink);
+    padding: 0.85rem 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 0px));
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -24px 60px -20px rgba(44, 38, 32, 0.45);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateY(100%);
+    transition: transform 0.5s var(--ease);
     z-index: 48;
   }
   body.nav-open .nav {
-    transform: none;
+    transform: translateY(0);
   }
   body.nav-open {
     overflow: hidden;
   }
+
+  /* grab-handle bar, centered at the top of the sheet */
+  .nav__handle {
+    display: block;
+    flex-shrink: 0;
+    width: 46px;
+    height: 5px;
+    border-radius: 999px;
+    background: #d8c8ab;
+    margin: 0 auto 0.6rem;
+  }
+
+  /* warm, centered serif links with soft dividers */
   .nav a {
     font-family: var(--display);
-    font-size: var(--step-3);
+    font-size: var(--step-2);
     font-weight: 500;
-    color: var(--surface);
+    color: var(--ink);
     opacity: 1;
+    text-align: center;
+    padding: 0.85rem 0.5rem;
+    border-bottom: 1.5px solid #e4d8c2;
   }
-  .nav__cta {
+  .nav a:hover {
+    color: var(--terracotta);
+  }
+
+  /* CTA pill: terracotta with cream text, strong contrast.
+     Scoped as .nav a.nav__cta so it outranks the .nav a link color above. */
+  .nav a.nav__cta {
     display: inline-flex;
-    margin-top: 1.25rem;
+    align-self: center;
+    justify-content: center;
+    margin-top: 1.4rem;
     font-family: var(--body);
     font-size: var(--step-0);
     font-weight: 600;
-    color: var(--white);
+    color: #fbf6ec;
     background: var(--terracotta);
-    padding: 0.8em 1.6em;
+    padding: 0.95em 2em;
     border-radius: 999px;
+    border-bottom: 0;
+    box-shadow: 0 14px 26px -14px rgba(194, 116, 90, 0.9);
   }
+  .nav a.nav__cta:hover {
+    color: #fbf6ec;
+    background: var(--terracotta-deep);
+  }
+
   .site-header__cta {
     margin-left: auto;
   }
@@ -761,10 +824,11 @@ h3 {
     width: 26px;
     height: 2px;
     background: currentColor;
-    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), background-color 0.3s var(--ease);
   }
+  /* toggle animates into a terracotta X */
   body.nav-open .nav-toggle {
-    color: var(--surface);
+    color: var(--terracotta);
   }
   body.nav-open .nav-toggle span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);

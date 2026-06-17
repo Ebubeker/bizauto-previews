@@ -644,7 +644,7 @@ h3 {
   color: var(--muted);
 }
 
-/* ===== mobile nav (full-screen) ===== */
+/* ===== mobile nav (DISTINCT: dark command panel that SLIDES DOWN from top) ===== */
 @media (max-width: 880px) {
   .nav {
     position: fixed;
@@ -653,42 +653,79 @@ h3 {
     height: 100vh;
     height: 100dvh;
     margin: 0;
+    counter-reset: navline;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.4rem;
-    background: var(--surface);
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bg);
     color: var(--text);
-    padding: 5.5rem 2.5rem 2.5rem;
-    transform: translateX(100%);
-    transition: transform 0.45s var(--ease);
+    padding: 5.25rem 1.5rem max(1.5rem, env(safe-area-inset-bottom)) 1.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.5s var(--ease);
     z-index: 48;
+    overflow-y: auto;
+    overscroll-behavior: contain;
   }
   body.nav-open .nav {
-    transform: none;
+    transform: translateY(0);
   }
   body.nav-open {
     overflow: hidden;
   }
-  .nav a {
+  /* regular nav links: large, left-aligned, red index counter + divider line */
+  .nav a:not(.nav__cta) {
+    counter-increment: navline;
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
     font-family: var(--display);
-    font-size: var(--step-3);
+    font-size: clamp(1.9rem, 9.5vw, 2.6rem);
     font-weight: 800;
+    line-height: 1.05;
     color: var(--text);
     opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    padding: 0.62em 0;
+    border-bottom: 1px solid var(--line);
   }
-  .nav a:hover {
+  .nav a:not(.nav__cta):first-of-type {
+    border-top: 1px solid var(--line);
+  }
+  .nav a:not(.nav__cta)::before {
+    content: "0" counter(navline);
+    font-size: 0.42em;
+    font-weight: 800;
+    color: var(--red);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    transform: translateY(-0.15em);
+  }
+  .nav a:not(.nav__cta):hover {
     color: var(--red);
   }
+  /* CTA: full-width solid red bar near the bottom, white uppercase text */
   .nav__cta {
-    display: inline-flex;
-    margin-top: 1rem;
-    font-size: var(--step--1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    font-family: var(--body);
+    font-size: var(--step-0);
+    font-weight: 700;
     color: var(--white);
     background: var(--red);
-    padding: 0.9em 1.7em;
+    padding: 1.05em 1.4em;
     border-radius: var(--r1);
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .nav__cta:hover {
+    background: var(--red-deep);
+    color: var(--white);
   }
   .site-header__cta {
     margin-left: auto;
@@ -709,10 +746,14 @@ h3 {
     width: 26px;
     height: 2px;
     background: currentColor;
-    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), background-color 0.3s var(--ease);
   }
+  /* toggle animates into a red X */
   body.nav-open .nav-toggle {
-    color: var(--text);
+    color: var(--red);
+  }
+  body.nav-open .nav-toggle span {
+    background: var(--red);
   }
   body.nav-open .nav-toggle span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
